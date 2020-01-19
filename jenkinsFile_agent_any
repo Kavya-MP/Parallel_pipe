@@ -1,7 +1,8 @@
 pipeline {
 agent any
-parallel {
 stages {
+stages('All stages') {
+parallel {
         stage('Build_check') {
             steps {
                 echo 'Building..'
@@ -22,5 +23,6 @@ stages {
 					}
 				}
     }
+}
 }
 }
